@@ -14,7 +14,7 @@ public class TestCustomTokenizer extends JFrame {
     public TestCustomTokenizer() {
         // Set up the frame
         setTitle("TOKENIZER: Underscore");
-        setSize(600, 400);
+        setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
         setResizable(false);
@@ -27,8 +27,12 @@ public class TestCustomTokenizer extends JFrame {
         // Text Areas for input and result
         inputArea = new JTextArea("Input text here", 10, 20);
         resultArea = new JTextArea("Result:", 10, 20);
+
         inputArea.setLineWrap(true); 
         inputArea.setWrapStyleWord(true);
+        inputArea.setCaretPosition(0);
+        inputArea.moveCaretPosition(inputArea.getText().length());
+        
         resultArea.setEditable(false);
         resultArea.setLineWrap(true); 
         resultArea.setWrapStyleWord(true);
